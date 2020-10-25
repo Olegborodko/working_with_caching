@@ -8,7 +8,7 @@ const knexConfig = {
 	    host : 'localhost',
 	    user : 'usertest',
 	    password : '111111',
-	    database : 'test'
+	    database : 'dvdrental'
   	},
   	pool: {
       min: 2,
