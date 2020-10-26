@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const path = require('path')
 const config = require('./config')
+const cacheMiddleware = require('./middleware/cacheMiddleware')
 
 const indexRouter = require('./routes/index');
 
@@ -9,6 +10,8 @@ const app = express()
 
 app.use(cors())
 app.use(express.json())
+
+app.use(cacheMiddleware(config.cacheMemoryTime));
 
 app.use('/api', indexRouter)
 
