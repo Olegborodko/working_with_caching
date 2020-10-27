@@ -7,7 +7,9 @@ This is example optimization Node requests with server caching
 - Redis
 
 ##### How to start
-1. git clone
+1. git clone <br>
+   yarn install
+   
 2. create .env in root folder  <br>
   `SERVER_PORT = 3000` <br>
   
@@ -20,8 +22,12 @@ This is example optimization Node requests with server caching
 
     `CACHE_MEMORY_TIME = 15` <br>
   `CACHE_REDIS_TIME = 30` <br>
+
+3. create database and run <br>
+   `npx knex migrate:latest` <br>
+   `npx knex seed:run`
   
-3. run `node index.js`
+4. run `node index.js`
 
 ##### Routes for tests
 http://localhost:3000/api/films <br>
